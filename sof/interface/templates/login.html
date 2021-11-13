@@ -1,0 +1,74 @@
+{% extends 'layout.html' %} 
+{% load crispy_forms_tags %}
+{% block body %}
+<style>
+    .login-head{
+        width: 450px;
+    }
+    .signmsg{
+        margin-top:200px;
+        
+    }
+    .messages{
+            padding:10px 0px !important;
+            margin: 0px 0px 10px 0px !important;
+            background-color: #75d36c3a;
+            border-radius: 0.5em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.274);
+    }
+    .msg{
+        color:rgb(16, 122, 16);
+        text-align: center;
+		padding: 10px 20px;
+    }
+    @media only screen and (max-width: 600px) {
+	.login-head{
+		width:80%;
+	}
+}
+</style>
+<section>
+    
+    <div class="signmsg">
+        <center>
+            {% if messages %}
+            <div class="col-lg-8">
+                <ul class="messages">
+                    {% for msg in messages %}
+                        <li>
+                             <p class="msg">{{msg.message}}</p> 
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %} 
+        </center>
+    </div>
+     
+    <div class="container login-head" style="margin-top: 80px;align-items: center;">
+        <form  method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Log In</legend>
+                {{ form|crispy }}
+            </fieldset>
+        
+            <div class="form-group">
+                <button class="btn btn-success" type="submit" style="font-size: large;">Login</button>
+            </div>
+    
+        </form>
+        <div class="border-top pt-3">
+            
+                Need An Account ? <a class="ml-2" href="{% url 'register' %}"><b>Sign Up</b></a>
+           
+        </div>
+        
+    </div>
+    
+</section>
+<script>
+    document.getElementById("titlename").innerHTML="Login";
+</script>
+{% endblock %}
+

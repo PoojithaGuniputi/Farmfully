@@ -1,0 +1,178 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+<style>
+	
+.foot-container{
+	margin:10%;
+	margin-bottom: 0%;
+	margin-top: 60px;
+}
+.ferti-head{
+	color:rgb(16, 122, 16);
+	font-weight: bolder;
+	font-size: 1.8em;
+	padding:180px 100px 40px 100px; 
+	text-align:center;
+}
+.predict{
+	color: white;
+	background-color: #61B15A;
+	font-weight: bold;
+	width: 7em;
+	height: 50px;
+	border-radius: 0.5em;
+	margin-top:15px;
+}
+.predict:hover{
+	background-color: #509949;
+}
+.ferti-sub-head{
+	text-align: center;
+	margin: 5px auto;
+	color:#61B15A;
+	font-size: 1.2em;
+}
+.soil-input{
+	margin-top:40px;
+}
+.ferti-body{
+	width:650px;
+}
+.btn-form{
+	width:100px;
+	margin:0px auto;
+}
+.bar{
+	width:60%;
+}
+@media only screen and (max-width: 600px) {
+	.ferti-head{
+		font-size: 1.5em;
+		padding: 160px 20px 30px 20px;
+	}
+	.ferti-body{
+		width:80%;
+	}
+}
+</style>
+<html>
+	<h2 class="ferti-head">Get informed on fertilizer based on your soil quality</h2>
+	<hr>
+	<form action="{% url 'Fertilizer-Result' %} " method="post">
+		{% csrf_token %}
+		<div class="container ferti-body">
+			<div class="form-group ">
+				<!-- <input class="form-control" id="cropname" type="text" name="cropname" placeholder="Enter Crop Name (example:rice)"> -->
+				<select
+				name="cropname"
+				class="form-control"
+				id="crop"
+				placeholder="Select a crop"
+				style="font-weight: bold"
+				required
+				>
+				<option selected>Select crop</option>
+				<option>rice</option>
+				<option>maize</option>
+				<option>chickpea</option>
+				<option>kidneybeans</option>
+				<option>pigeonpeas</option>
+				<option>mothbeans</option>
+				<option>mungbean</option>
+				<option>blackgram</option>
+				<option>lentil</option>
+				<option>pomegranate</option>
+				<option>banana</option>
+				<option>mango</option>
+				<option>grapes</option>
+				<option>watermelon</option>
+				<option>muskmelon</option>
+				<option>apple</option>
+				<option>orange</option>
+				<option>papaya</option>
+				<option>coconut</option>
+				<option>cotton</option>
+				<option>jute</option>
+				<option>coffee</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<!-- <input class="form-control" id="nitrogen" type="number" name="nitrogen" placeholder="Enter nitrogen value (example:50)"> -->
+				<label ><p class="ferti-sub-head">Nitrogen&nbsp;&nbsp;</p></label><br>
+				<input class="bar" type="range" value="50" min="1" max="200" oninput="this.nextElementSibling.value = this.value" name="nitrogen">
+				<output>50</output>
+			<div class="form-group">
+				<label ><p class="ferti-sub-head">Phosphorous&nbsp;&nbsp;</p></label><br>
+				<input class="bar" type="range" value="50" min="1" max="200" oninput="this.nextElementSibling.value = this.value" name="phosphorous">
+				<output>50</output>
+				<!-- <input class="form-control" id="phosphorous" type="range" name="phosphorous" placeholder="Enter Phosphorus value (example:50)" oninput="this.nextElementSibling.value = this.value"> -->
+			</div>
+			<div class="form-group">
+				<!-- <input class="form-control" id="potassium" type="number" name="potassium" placeholder="Enter Potassium value (example:50)"> -->
+				<label ><p class="ferti-sub-head">Potassium&nbsp;&nbsp;</p></label><br>
+				<input class="bar" type="range" value="50" min="1" max="200" oninput="this.nextElementSibling.value = this.value" name="potassium">
+				<output>50</output>
+			</div>
+			<input class="btn btn-form btn-success form-control" type="submit" value="Submit" />
+		
+		</div>
+		</div>
+		<!-- <div class="container soil-input">
+			<div class="form-group">
+				<label ><p class="ferti-sub-head">Crop name</p></label>
+				{{form.cropname}}
+			</div>
+			<div class="form-group">
+				<label ><p class="ferti-sub-head">Nitrogen</p></label>
+				{{form.nitrogen}}
+			</div>
+			<div class="form-group">
+				<label ><p class="ferti-sub-head">Phosphorous</p></label>
+				{{form.phosphorous}}
+			</div>
+			<div class="form-group">
+				<label><p class="ferti-sub-head">Potassium</p></label>
+				{{form.potassium}}
+			</div>
+			<input type="submit" class="predict btn btn-info" value="Predict"/>
+		</div>  -->
+	</form>
+	
+</html>
+{% endblock %}
+
+
+
+<!-- <select
+				name="cropname"
+				class="form-control"
+				id="crop"
+				placeholder="Select a crop"
+				style="font-weight: bold"
+				required
+				>
+				<option selected>Select crop</option>
+				<option>rice</option>
+				<option>maize</option>
+				<option>chickpea</option>
+				<option>kidneybeans</option>
+				<option>pigeonpeas</option>
+				<option>mothbeans</option>
+				<option>mungbean</option>
+				<option>blackgram</option>
+				<option>lentil</option>
+				<option>pomegranate</option>
+				<option>banana</option>
+				<option>mango</option>
+				<option>grapes</option>
+				<option>watermelon</option>
+				<option>muskmelon</option>
+				<option>apple</option>
+				<option>orange</option>
+				<option>papaya</option>
+				<option>coconut</option>
+				<option>cotton</option>
+				<option>jute</option>
+				<option>coffee</option>
+				</select> -->

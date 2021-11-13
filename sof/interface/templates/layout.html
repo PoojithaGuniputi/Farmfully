@@ -1,0 +1,448 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title id="titlename">{{ title }}</title>
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'images/logo.jpeg' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="plant" />
+    <!-- bootstrap css files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- bootstrap js files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"crossorigin="anonymous"></script>
+
+    <!-- font awesome icons -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- google fonts -->
+    <!--only checking-->
+    <!-- body -->
+    <!-- heading text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- normal text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&display=swap" rel="stylesheet">
+    <!-- tagline -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <!-- website name -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* --------------------Navbar------------------- */
+        .navbar-dark {
+            background-color: rgb(253, 249, 249) !important;
+        }
+
+   
+        #navbar2 {
+            background-color: #61B15A !important;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 25px;
+        }
+
+        .logo-head {
+            font-weight: bolder;
+            color: rgb(16, 122, 16);
+        }
+
+        .light-text {
+            color: white !important;
+        }
+
+        li {
+            display: inline ;
+        }
+
+        .nav-link {
+            font-size: 1em;
+            font-weight: bold;
+            margin: 0px 8px;
+            background-color: #ffffff00 !important;
+            color: white !important;
+        }
+
+        .links {
+            margin: 0px 0px 0px -15px;
+        }
+
+        .nav-link:hover {
+            font-size: 1em;
+        }
+
+        .nd {
+            margin-top: 77px;
+            box-shadow: 0px 4px 7px rgba(109, 109, 109, 0.548);
+        }
+
+        button {
+            background-color: #cefabd00;
+            border-radius: 0.5em;
+            width: 100px;
+            padding: 3px;
+            font-weight: 700;
+        }
+
+        #login {
+            border-style: none;
+            font-weight: 900;
+            color: rgb(16, 122, 16);
+            margin-right: -15px;
+        }
+        .user_name{
+            border-style: none;
+            font-weight: 700;
+            color: rgb(16, 122, 16);
+            margin-right: -15px;
+            width: 100px;
+            padding: 3px;
+        }
+        #signup {
+            border-color: rgb(16, 122, 16);
+            border-style: solid;
+            font-weight: 900;
+            border-radius: 1em;
+            color: rgb(16, 122, 16);
+            margin: 0px 8px;
+        }
+
+        .nn {
+            -ms-flex-direction: column;
+            flex-direction: row !important;
+        }
+
+        .navbar-toggler-icon {
+            color: rgb(255, 255, 255) !important;
+            border-style: none;
+        }
+
+        .navbar-toggler-icon::selection {
+            color: white !important;
+        }
+
+        /* --------------------Navbar Ends------------------- */
+        /* --------------------Footer Ends------------------- */
+
+        footer {
+            color: black;
+            background-image: url("{% static 'images/cloud_new.svg' %}");
+            background-size: cover;
+        }
+
+        .foot-container {
+            margin: 10%;
+            margin-bottom: 0%;
+            margin-top: 60px;
+        }
+
+        .foot {
+            padding: 30px 70px 30px 70px;
+        }
+
+        .contact {
+            box-shadow: 2px 2px 8px rgba(3, 3, 3, 0.26);
+            padding: 30px;
+            background-color: white;
+            border-radius: 0.7em;
+        }
+
+        .contact-text {
+            font-weight: bolder;
+            color: rgb(16, 122, 16);
+        }
+
+        .btn-success {
+            background-color: #61B15A !important;
+            color: #fcfcfc;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+
+        .form-control:focus {
+            border: #61B15A;
+            box-shadow: inset 0 1px 1px #61b15aec, 0 0 8px #61b15a9a;
+        }
+
+        .social-icon {
+            font-size: 25px !important;
+            width: 10px;
+            color: #61B15A;
+        }
+
+        .social-icon:hover {
+            color: rgb(29, 95, 29);
+        }
+
+        .cright {
+            margin-top: 50px;
+            padding-left: 0px;
+        }
+        /* --------------------Footer Ends------------------- */
+        /* --------------------Media Queries-----------------*/
+        @media only screen and (max-width: 600px) {
+
+            /*mobile view*/
+            /*---- navbar--- */
+            .logo-head {
+                font-size: 0em;
+            }
+
+            .logo {
+                width: 30px;
+                height: 30px;
+            }
+
+            #login {
+                font-size: 0.9em;
+            }
+
+            #signup {
+                font-size: 0.9em;
+                width: 70px;
+            }
+
+            .nd {
+                margin-top: 64px;
+            }
+            .contact-text{
+                font-size: 30px;
+            }
+
+            /*----footer-- */
+            .social-icon {
+                font-size: 22px !important;
+                text-align: center !important;
+            }
+
+            .con {
+                font-size: 30px;
+            }
+
+            .foot {
+                padding: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 1000px) {
+
+            /*tab*/
+            .nd {
+                background-color: #61B15A !important;
+            }
+
+            .links {
+                margin: 0px 0px 0px 0px;
+            }
+
+            .nav-link {
+                color: white !important;
+            }
+
+            .foot {
+                padding: 50px;
+            }
+        }
+
+        /* -----------------Media Queries Ends--------------*/
+        /* ----------------- go to top----------------------*/
+        #myBtn {
+            display: none;
+            position: fixed; 
+            bottom: 20px; 
+            right: 10px; 
+            z-index: 99; 
+            border: none; 
+            outline: none; 
+            background-color: #61B15A; 
+            color: white; 
+            cursor: pointer;
+            padding: 10px; 
+            border-radius: 100%; 
+            width:45px;
+        }
+
+        #myBtn:hover {
+            background-color: rgb(16, 122, 16);; /* Add a dark-grey background on hover */
+        }
+        /* --------------- go to top ends---------------------*/
+</style>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <!----------------------- Navbar -------------------------->
+    <!-- First navbar -->
+	<nav class="navbar  navbar-expand-lg container-fluid navbar-dark bg-dark fixed-top " id="navbar">
+		<div class="container ">
+			<a class="navbar-brand" href="{% url 'Farmfully-home' %}">
+				<img  src="{% static 'images/logo.png' %}" class="logo" alt="logo" align=left>
+                <h1 class="logo-head" id="heading">Farmfully</h1>
+			</a>
+
+            {% if user.is_authenticated %}  <!--if the user is logged in-->
+            <ul class="navbar-nav nn ml-auto">
+                <li class="nav-item active" >
+                    <a class="nav-link" href="{% url 'logout' %}">
+                        <button id="login" style="display: inline;">Logout</button>
+                    </a>
+                </li>
+                <!-- 
+                    for displaying username after login.
+                    <li class="nav-item active" >
+                        <p class="user_name" style="display: inline;">{{ user.username }}</p>
+                    </li>
+                -->
+            </ul> 
+            {% else %}  <!--if the user is not logged in-->
+            <ul class="navbar-nav nn ml-auto">
+                <li class="nav-item active" >
+                    <a class="nav-link" href="{% url 'login' %}">
+                        <button id="login" style="display: inline;">Login</button>
+                    </a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="{% url 'register' %}">  
+                        <button id="signup">Sign up</button>
+                    </a>
+                </li>
+            </ul> 
+            {% endif %}            
+		</div>
+	</nav> 
+    <!-- second navbar -->
+    <nav class="navbar navbar-expand-lg container-fluid navbar-dark bg-dark fixed-top nd" id="navbar2">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarResponsive">
+                <ul class=" links navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'Farmfully-home' %}">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{% url 'Predict-Disease' %}">Predict-disease
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{% url 'expert-advice' %}">Expert-advice
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{% url 'Fertilizer' %}">Fertilizer
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{% url 'Forums' %}">Forums
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{% url 'E-learning' %}">E-Learning
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        </div>
+    </nav>
+
+    <!--------------------- Navbar Ends ---------------------------->
+    
+    {% block body %} {% endblock %}
+
+    <!--------------------- Footer ------------------------------>
+    <footer>
+        <div class=" foot-container " id="footer-contact">
+            <div class="foot">
+                <div class="row">
+                    <div class=" col-lg-6 contact">
+                        <h2 class="contact-text" style="margin-bottom: 10px;display:inline;">Contact Us
+                            <div style="text-align: right;">
+                                <i class="social-icon fab fa-facebook-f"></i>
+                                <i class="social-icon fab fa-twitter"></i>
+                                <i class="social-icon fab fa-instagram"></i>
+                                <i class="social-icon fas fa-envelope"></i>
+                            </div>
+                        </h2><br>
+                        <form action="..#footer-contact" method="post">
+                            {%  csrf_token %} <!--cross site request forgery-->
+                            <div class="form-group">
+                                <input class="form-control" id="name" type="text" name="name" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="email" type="email" name="email" placeholder="Your E-Mail ID">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="message" name="message" placeholder="Message"></textarea>
+                            </div>
+                            <input class="btn btn-success form-control" type="submit" value="Submit" />
+                        </form>
+                    </div>
+                    <div class="col-lg-6 cright text-lg-right text-sm-left">
+                        <a href="{% url 'Farmfully-home' %}"><img src="{% static 'images/footer.jpeg' %}"
+                                style="width:209px;height:69px;" class="footer-logo" alt="logo"></a>
+                        <p><br>&copy; 2021 All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--------------------- Footer Ends ------------------------------>
+</body>
+<script>
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+</html>

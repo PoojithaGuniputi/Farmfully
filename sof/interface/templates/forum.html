@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+<style>
+	.forum-head{
+		color:rgb(16, 122, 16);
+		font-weight: bolder;
+		font-size: 1.8em;
+		padding:180px 100px 40px 100px; 
+		text-align:center;
+	}
+	.foot-container{
+		margin:10%;
+		margin-bottom: 0%;
+		margin-top: 60px;
+	}
+	.forum_body{
+		width: 650px;
+	}
+	.reply_content{
+		color:rgb(94, 93, 93);
+		padding-left: 30px;
+	}
+	@media only screen and (max-width: 600px) {
+	.forum-head{
+		font-size: 1.5em;
+		padding: 160px 20px 30px 20px;
+	}
+	.forum_body{
+		width:80%;
+	}
+	.input{
+		width:80%;
+	}
+}
+</style>
+
+<section>
+	<h2 class="forum-head">Grab a chance to ask your quieres here</h2>
+	<hr>
+	<div class="container forum_body" style="margin-top: 40px;align-items: center;">
+		<form action="" method="POST">
+			{% csrf_token %}
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" id="username" name="username" placeholder=" enter your name">
+			</div>
+			<div class="form-group">
+				<label for="query">Your query</label>
+				<textarea class="form-control" id="query" name="query" rows="3"
+					placeholder="type your query here"></textarea>
+			</div>
+			
+			<button type="submit" class="btn btn-success">Post</button>
+			<input type="number" style="visibility: hidden;" name="isquery" value="0">
+		</form>
+	</div>
+	<div class="container forum_body" style="margin-top: 50px;align-items: center;border: 1px solid rgb(184, 180, 180);">
+		{% for q in queries %}
+		<!--queries is the context of dictionary that we passed -->
+		
+				<p><b><a class="mr-2" href="#">{{ q.username }}</a></b> <strong class="text-muted">{{ q.date_posted|date:"F d, Y" }}</strong> </p>
+				<p>{{ q.query }}</p>
+				<form action="" method="POST">
+					{% csrf_token %}
+					<input type="text" name="reply" placeholder="type your reply here...">
+					<input type="submit" value="send">
+					<input type="number" style="visibility: hidden;" name="isquery" value="1">
+					<input type="text" style="visibility: hidden;" name="replyid" value= {{ q.query_id }}>
+					
+				</form>
+				{% for r in replies %}
+					{% if r.reply_id ==  q.query_id  %}
+						<p class="reply_content">&#127807;{{ r.reply }}</p>
+					{% endif %}
+				{% endfor %}
+				<hr>
+		{% endfor %}
+		
+	</div>
+</section>
+</html>
+
+{% endblock %}

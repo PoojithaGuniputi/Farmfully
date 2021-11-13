@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+    .predict-head{
+        color:rgb(16, 122, 16);
+		font-weight: bolder;
+		font-size: 1.8em;
+		padding:180px 100px 40px 100px; 
+		text-align:center;
+    }
+	.predict-body{
+		margin: 10px auto;
+		width:30%;
+	}
+	#output-image{
+		width:100%;
+		margin-bottom: 10px;
+	}
+	p{
+		font-size: 1.2em;
+		color:rgb(16, 122, 16);
+	}
+    @media only screen and (max-width: 600px) {
+	.predict-head{
+		font-size: 1.5em;
+		padding: 160px 20px 30px 20px;
+	}
+	.predict-body{
+		margin: 10px auto;
+		width:70%;
+	}
+}
+</style>
+	<h1 class="predict-head">Find out which disease has been caught by your plant</h1>
+	<hr>
+	<div class="predict-body">
+	<!-- <form class="form-signin" enctype=multipart/form-data  method="POST"> -->
+	<form class="form-signin" enctype=multipart/form-data action="http://127.0.0.1:5000/" method="POST">
+		{%  csrf_token %}
+		<p>Please Upload The Image</p>
+		<input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-size: 0.8em;
+		color:rgb(16, 122, 16);">
+		<br>
+		<br>
+		<img id="output-image" class="rounded mx-auto d-block" />
+		<button class="btn btn-lg btn-success btn-block" type="submit" style="font-weight: bold;">Predict</button>	
+    </form>
+	</div>
+
+<script type="text/javascript">
+	function preview_image(event) {
+	  var reader = new FileReader();
+	  reader.onload = function () {
+		var output = document.getElementById('output-image')
+		output.src = reader.result;
+	  }
+	  reader.readAsDataURL(event.target.files[0]);
+	}
+  </script>
+</html>
+
+{% endblock %}

@@ -1,0 +1,158 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+<style>
+.foot-container{
+	margin:10%;
+	margin-bottom: 0%;
+	margin-top: 60px;
+}
+.learn-head{
+	color:rgb(16, 122, 16);
+	font-weight: bolder;
+	font-size: 1.8em;
+	padding:180px 100px 40px 100px; 
+	text-align:center;
+}
+@media only screen and (max-width: 600px) {
+	.learn-head{
+		font-size: 1.5em;
+		padding: 160px 20px 30px 20px;
+	}
+}
+/*------------------------------------ filter-------------------------------- */
+.filtering {
+    margin-bottom: 40px;
+}
+.filtering span {
+    border-bottom: 2px solid transparent;
+    color: #282b2d;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-right: 20px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.filtering span:last-child {
+    margin: 0;
+}
+.filtering .active {
+    border-color: #417c3c;
+    color: #61B15A;
+}
+.portfolio-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-wrapper .portfolio-image img {
+    transform: scale(1.2);
+    will-change: transform;
+    transition: all 0.5s ease;
+    width: 100%;
+}
+.portfolio-wrapper:hover .portfolio-image img {
+    transform: none;
+}
+.grid .grid-item {
+    position: relative;
+    overflow: hidden;
+}
+.grid .grid-item .portfolio-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.grid .grid-item .portfolio-wrapper .portfolio-image img {
+    transform: none;
+    will-change: transform;
+    transition: none;
+    width: 100%;
+}
+.grid .grid-item .portfolio-wrapper:hover .portfolio-image img {
+    transform: none;
+}
+</style>
+<h2 class="learn-head">Earn quality with every content here</h2>
+<hr>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ==" crossorigin="anonymous"></script>
+<section>
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="filtering col-sm-12 text-center">
+                <!-- <select class="abc">
+                    <option ><span data-filter=".plant" class="active">plant health</span></option>
+                    <option ><span data-filter=".soil" class="">soil</span></option>
+                    <option ><span data-filter=".fertilizer" class="">fertilizer</span></option>
+                </select> -->
+                <!-- <span data-filter="*" class="active">All</span> -->
+                <span data-filter=".plant" class="active">Plant Health</span>
+                <span data-filter=".soil" class="">Soil</span>
+                <span data-filter=".fertilizer" class="">Fertilizer</span>
+            </div>
+            <div class="col-12 text-center w-100">
+                <div class="grid form-row gallery text-center">
+                    <div class="col-lg-4 col-sm-6 mb-2 grid-item soil">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+								<iframe src="https://www.youtube.com/embed/hZVhswYdVeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 grid-item soil fertilizer">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+								<iframe src="https://www.youtube.com/embed/M4wxhjYbl9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 grid-item plant">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+								<iframe " src="https://www.youtube.com/embed/LoWIqizH1m4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 grid-item soil">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+								<iframe src="https://www.youtube.com/embed/hZVhswYdVeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 grid-item soil fertilizer">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+								<iframe src="https://www.youtube.com/embed/M4wxhjYbl9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+	$(function(){
+    $(".grid").masonry({ itemSelector: ".grid-item" });
+    
+    $(".filtering").on("click", "span", function () {
+        var a = $(".gallery").isotope({});
+        var e = $(this).attr("data-filter");
+        a.isotope({ filter: e });
+    });
+    $(".filtering").on("click", "span", function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+})
+</script>
+
+</html>
+
+{% endblock %}

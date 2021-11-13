@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+       .logout-msg{
+              font-size: 1em;
+              width:450px;
+       }
+       @media only screen and (max-width: 600px) {
+	.logout-msg{
+		font-size: 0.5em;
+              width:80%;
+	}
+}
+</style>
+<div class="container logout-msg" style="margin-top: 178px;align-items: center;">
+   <h5>You have been successfully logged out</h5>
+    <div class="border-top pt-3"></div>
+           <a  href="{% url 'login' %}" style="font-size: 17px;"><b>Log In again</b></a>
+    </div>
+</div>
+
+{% endblock %}

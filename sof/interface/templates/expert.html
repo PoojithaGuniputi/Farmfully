@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% load static %} 
+<style>
+    .expert-head{
+        color:rgb(16, 122, 16);
+        font-weight: bolder;
+        font-size: 1.8em;
+        padding:180px 100px 40px 100px; 
+        text-align:center !important;
+    }
+
+    .video-grid-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        background-color: black;
+    }
+
+    .main-grid-container{
+        display: grid;
+        grid-template-columns: 60% 20%;
+    }
+
+    video{
+        border-radius: 20%;
+        background-color: black;
+    }
+</style>
+
+<head>
+    <link href="{% static 'css/agency.css' %}" rel="stylesheet">
+</head>
+<section>
+    <h2 class="expert-head" style="text-align:center;">Get advice from our Experts</h2>
+    <hr>
+</section>
+</html>
+{% endblock %}
