@@ -77,6 +77,9 @@ from django.contrib.auth.signals import user_logged_in
 import requests
 import random 
 
+from django.views.decorators.csrf import csrf_exempt
+
+
 # Create your views here.
 def home(request):
     if request.method=="POST":
@@ -130,4 +133,13 @@ def forums(request):
     return render(request, 'forum.html', context)
 
 def learning(request):
-    return render(request, 'learning.html',{'title': 'E-Learning'})
+    return render(request, 'learning.html',{'title': 'E-Learning'})\
+        
+        
+@csrf_exempt
+def predict_process(request):
+    # response=requests.get('http://127.0.0.1:5000/').json()
+    if request.method =='POST':
+        n=request.POST['prediction_result']
+        print(n)
+    return render(request,'predict_result.html',{'pred':n})

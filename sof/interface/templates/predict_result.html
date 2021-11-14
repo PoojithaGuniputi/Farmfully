@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+<style>
+.foot-container{
+	margin:10%;
+	margin-bottom: 0%;
+	margin-top: 60px;
+}
+.result{
+  padding:180px 50px 50px 50px;
+}
+.card-body{
+  justify-content: center; 
+  background-color:rgba(218, 255, 191, 0.671);
+  border-radius: 0.4em;
+  box-shadow: 3px 2px 8px rgba(12, 12, 12, 0.233);
+}
+b{
+  color:rgb(16, 122, 16);
+  font-size:1.3em;
+}
+i{
+  color:rgb(18, 95, 18);
+  margin-top: 10px;
+  font-weight: bolder !important;
+}
+/* @media only screen and (max-width: 600px) {
+
+} */
+</style>
+<div class="container result">
+  <div class="row">
+      <div class="col-sm py-2 py-md-3">
+          <div class="card card-body">
+               <p style="color: rgb(53, 53, 53);text-align:left">{{ pred | safe }}</p>
+          </div>
+      </div>
+  </div>
+</div>
+<center>
+  <a href="{% url 'Predict-Disease' %}" ><button class="btn btn-success" style="width:150px;">Go Back</button></a>
+</center>
+
+</html>
+
+{% endblock %}
