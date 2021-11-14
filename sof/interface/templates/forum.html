@@ -63,7 +63,7 @@
 				<p>{{ q.query }}</p>
 				<form action="" method="POST">
 					{% csrf_token %}
-					<input type="text" name="reply" placeholder="type your reply here...">
+					<input type="text" name="reply" placeholder="type your reply here..." required>
 					<input type="submit" value="send">
 					<input type="number" style="visibility: hidden;" name="isquery" value="1">
 					<input type="text" style="visibility: hidden;" name="replyid" value= {{ q.query_id }}>
