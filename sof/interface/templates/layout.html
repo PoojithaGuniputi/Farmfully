@@ -133,7 +133,7 @@
             color: rgb(16, 122, 16);
             margin-right: -15px;
         }
-
+/* 
         .user_name {
             /* border-style: none;
             font-weight: 700;
@@ -141,12 +141,19 @@
             margin-right: -15px;
             width: 100px;
             padding: 3px; */
-            border-style: none;
+            /* border-style: none;
             font-weight: 900;
             color: rgb(16, 122, 16);
             margin-right: -15px;
-        }
+        } */ 
 
+        #username{
+            border-style: none;
+            font-weight: 900;
+            color: rgb(16, 122, 16);
+            width:10em;
+            pointer-events: none;
+        }
         #signup {
             border-color: rgb(16, 122, 16);
             border-style: solid;
@@ -258,6 +265,7 @@
 
             #login {
                 font-size: 0.9em;
+
             }
 
             #signup {
@@ -321,23 +329,23 @@
         /* -----------------Media Queries Ends--------------*/
         /* ----------------- go to top----------------------*/
         #myBtn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 10px;
+            display: block ;
+            position: fixed ;
+            bottom: 20px ;
+            right: 10px ;
             z-index: 99;
             border: none;
             outline: none;
-            background-color: #61B15A;
+            background-color: #61B15A ;
             color: white;
-            cursor: pointer;
-            padding: 10px;
-            border-radius: 100%;
-            width: 45px;
+            cursor: pointer ;
+            padding: 10px ;
+            border-radius: 100% ;
+            width: 45px ;
         }
 
         #myBtn:hover {
-            background-color: rgb(16, 122, 16);
+            background-color: rgb(16, 122, 16) !important;
             ;
             /* Add a dark-grey background on hover */
         }
@@ -346,7 +354,7 @@
     </style>
 
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="fa fa-arrow-up"></span></button>
     <!----------------------- Navbar -------------------------->
     <!-- First navbar -->
     <nav class="navbar  navbar-expand-lg container-fluid navbar-dark bg-dark fixed-top " id="navbar">
@@ -359,16 +367,17 @@
             {% if user.is_authenticated %}
             <!--if the user is logged in-->
             <ul class="navbar-nav nn ml-auto">
+               
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'logout' %}">
-                        <button id="login" style="display: inline;">Logout</button>
+                    <a class="nav-link">
+                        <button class="logged-nav" id="login" style=" pointer-events: none;">{{ user.username }}</button>
                     </a>
                 </li>
-                
-                    <!-- for displaying username after login. -->
-                    <li class="nav-item active" >
-                        <p class="user_name" style="display: inline;">{{ user.username }}</p>
-                    </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'logout' %}">
+                             <button class="logged-nav" id="login" >Logout</button> 
+                    </a>
+                </li>
                
             </ul>
             {% else %}
@@ -474,7 +483,7 @@
                             <i class="social-icon fa fa-facebook-f"></i>
                             <i class="social-icon fa fa-twitter"></i>
                             <i class="social-icon fa fa-instagram"></i>
-                            <i class="social-icon fa fa-envelope -o" style="margin-right :20px;"></i>
+                            <i class="social-icon fa fa-envelope -o" ></i>
                         </div>
                     </div>
                 </div>

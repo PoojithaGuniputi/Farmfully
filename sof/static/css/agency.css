@@ -505,11 +505,11 @@ ul.chatHistory li {
   display: flex;
 }
 
-/* .chat-container {
+.chat-container {
   position: fixed;
   bottom: 0;
-  right: 0;
-} */
+  left: 0;
+}
 .chat-div {
   margin-left: 10px;
   margin-right: 10px;

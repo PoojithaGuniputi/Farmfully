@@ -291,12 +291,12 @@ function myjsapp(peerClient) {
             var list = $('.onlinepeers')
             list.empty()
             if(users.length == 0) {
-                var usr = '<li>Looks like no one is online</li>'
+                var usr = '<li>Looks like no Expert is available</li>'
                 list.append(usr);
                 return
             }
             for (var i = 0; i < users.length; i++) {
-                var usr = '<li class="peeruser">'+ users[i] + '</li>'
+                var usr = '<li class="peeruser"> '+ users[i] + '</li>'
                 list.append(usr);
             }
         }

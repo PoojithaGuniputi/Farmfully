@@ -86,7 +86,7 @@ def addDetails(request):
         <br/>6. Plant Nitrogen fixing plants like peas or beans.
 
         <br/>7. Use NPK fertilizers with high N value.
-        <a href="#">abc</a>
+
         <br/>8. <i>Do nothing</i> – It may seem counter-intuitive, but if you already have plants that are producing lots of foliage, it may be best to let them continue to absorb all the nitrogen to amend the soil for your next crops.""",
 
 
