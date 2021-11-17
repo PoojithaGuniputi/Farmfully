@@ -2,125 +2,142 @@
 {% load static %}
 {% block body %}
 <style>
-	body{
-		background-color:#f3f3f3;
+	body {
+		background-color: #f3f3f3;
 	}
-	h2{
-		color:rgb(16, 122, 16);
+
+	h2 {
+		color: rgb(16, 122, 16);
 		font-weight: bolder;
-		font-size:2.5em;
+		font-size: 2.5em;
 	}
-	h4{
-		color:rgb(16, 122, 16);
+
+	h4 {
+		color: rgb(16, 122, 16);
 		font-weight: bolder;
 		margin-top: 15px;
 		text-decoration: underline;
 	}
+
 	/*---------------Main Page -------------------*/
-	
-	.main{
-		background-image: linear-gradient(to top, rgba(255, 255, 255, 0) , rgba(5, 5, 5, 0.685) ),url("static\\images\\bg1.jpg");
+
+	.main {
+		background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(5, 5, 5, 0.685)), url("static\\images\\bg1.jpg");
 		background-attachment: fixed;
-		background-repeat:no-repeat;
+		background-repeat: no-repeat;
 		background-size: cover;
 		height: 45em;
 	}
-	.text-wh{
-		font-size:5.5em;
+
+	.text-wh {
+		font-size: 5.5em;
 		padding-top: 300px;
-		color:#ebebca;
+		color: #ebebca;
 		font-weight: bolder;
 		text-shadow: 4px 4px 8px #000000;
 		font-family: 'Averia Serif Libre', cursive;
 		letter-spacing: 5px;
 	}
 
-	.text-hh{
-		font-size:  3em;
-		color:#fcf9c5;
+	.text-hh {
+		font-size: 3em;
+		color: #fcf9c5;
 		text-shadow: 4px 4px 8px #000000;
 		font-weight: 350;
 		font-family: 'Caveat', cursive;
-		text-decoration:none;
+		text-decoration: none;
 	}
+
 	/*--------------Main Page Ends----------------*/
 	/*------------------About us------------------*/
 
-	.about{
+	.about {
 		background-color: rgb(253, 253, 253);
 		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.555);
-		width:70%;
+		width: 70%;
 		margin: 150px auto;
-		padding:50px;
-		color:rgb(0, 0, 0);
+		padding: 50px;
+		color: rgb(0, 0, 0);
 		font-weight: 600;
 		font-size: 0.9em;
-		border-radius:0.5em;
+		border-radius: 0.5em;
 	}
-	.about-info{
+
+	.about-info {
 		font-family: 'Be Vietnam Pro', sans-serif;
 		padding: 0px 20px;
 		text-align: center;
 	}
+
 	/*----------------About us Ends------------------*/
 	/* ------------------Features--------------------*/
 
-	.features{
-		width:80%;
+	.features {
+		width: 80%;
 		margin: 0px auto;
-		padding: 0px 0px ;
+		padding: 0px 0px;
 	}
-	.info,a,a:hover{
+
+	.info,
+	a,
+	a:hover {
 		color: black;
 		text-decoration: none;
 		font-size: 0.7em;
-		font-weight:100;
+		font-weight: 100;
 	}
-	.info{
+
+	.info {
 		font-size: 0.6em !important;
 		font-family: 'Be Vietnam Pro', sans-serif;
 	}
-	.messages{
-            padding:10px 0px !important;
-            margin: 0px 0px 10px 0px !important;
-            background-color: #75d36c3a;
-            border-radius: 0.5em;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.274);
-    }
-    .msg{
-        color:rgb(16, 122, 16);
-        text-align: center;
+
+	.messages {
+		padding: 10px 0px !important;
+		margin: 0px 0px 10px 0px !important;
+		background-color: #75d36c3a;
+		border-radius: 0.5em;
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.274);
+	}
+
+	.msg {
+		color: rgb(16, 122, 16);
+		text-align: center;
 		padding: 10px 20px;
-    }
+	}
+
 	/* -----------------Features Ends----------------*/
 	/* ------------------Media Queries--------------*/
 	@media only screen and (max-width: 600px) {
-		.text-wh{
+		.text-wh {
 			font-size: 3em;
 		}
-		.text-hh{
+
+		.text-hh {
 			font-size: 2em;
 		}
-		.about{
+
+		.about {
 			width: 90%;
 			font-size: 10px;
 		}
 	}
+
 	/* ---------------Media Queries Ends-----------*/
 </style>
 
 <script>
-    window.onscroll = function() {scrollFunction()};
- 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    
-    document.getElementById("navbar").style.background = "#501e27" ;
-  } else {
-   
-    document.getElementById("navbar").style.background = "none";
-  }
-}
+	window.onscroll = function () { scrollFunction() };
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+
+			document.getElementById("navbar").style.background = "#501e27";
+		} else {
+
+			document.getElementById("navbar").style.background = "none";
+		}
+	}
 </script>
 <!-- ----------------------home page---------------------------------->
 <section class="banner_w3lspvt main" id="home">
@@ -131,10 +148,10 @@ function scrollFunction() {
 					<div class=" w3layouts-banner-info text-center">
 						<h1 class="text-wh">FARMFULLY</h1>
 						<h4 class=" text-hh mx-auto my-4"><b>Precise care for Producing more</b></h4>
-						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 </section>
 <!-- ----------------------home page ends---------------------------------->
@@ -144,16 +161,16 @@ function scrollFunction() {
 	<div class="container">
 		<h2 class="mb-sm-5 mb-4 text-center"> About Us</h2>
 		<div class="row core-grids">
-			<div class="col-lg-6 col-md-12 core-left" >
-				<img src="{% static 'images/about.jpg'%}" class="img-fluid" alt="" align=left/>
+			<div class="col-lg-6 col-md-12 core-left">
+				<img src="{% static 'images/about.jpg'%}" class="img-fluid" alt="" align=left />
 			</div>
 			<div class="col-lg-6 col-md-12 core-right mt-sm-4 mt-lg-0">
-				<p class="about-info" style="text-align: justify;font-size: 1.1em;">Getting affected by a disease is common in plants due to various factors such as
-					fertilizers, cultural practices followed,etc. These diseases hurt agricultural yield and
-					eventually the economy based on it. Thus,we came up with an approach to detect plant
-					disease by uploading an image of the leaf. A detailed analysis report is generated which
-					can be downloaded. Along with this, Farmfully provides a platform where users can
-					seek guidance from an expert.
+				<p class="about-info" style="text-align: justify;font-size: 1.1em;">There are about 150 million farmers
+					in India. Crop diseases are a major threat to food security, but their rapid identification remains
+					difficult in many parts of the world due to the lack of necessary infrastructure. Improper
+					care can lead to serious effects on plants and affects the quality, quantity or productivity
+					of the yield.Thus,we came up with an approach to detect plant disease by uploading an image of the
+					leaf.Along with this, Farmfully provides a platform where users can seek guidance from an expert.
 				</p>
 			</div>
 		</div>
@@ -163,59 +180,63 @@ function scrollFunction() {
 
 <!-- -------------------------Features------------------------------------>
 <section class="features">
-	<h2 style="margin-bottom: 10px;"class="text-center"> Our Services</h>
-	<div class="container py-md-5">
-		<div class="row blog-grids">
+	<h2 style="margin-bottom: 10px;" class="text-center"> Our Services</h>
+		<div class="container py-md-5">
+			<div class="row blog-grids">
 
-			<!--Plant Disease Prediction-->
+				<!--Plant Disease Prediction-->
 
-			<div class="col-lg-6 col-md-6 blog-left mb-lg-5  pb-lg-0 pb-5 ">
-				<a href="{% url 'Predict-Disease' %}">
-					<img src="{% static 'images/predict.jpg'%}" style="width:80%;height:80%;"class="img-fluid" alt="plant disease prediction" />
-					<div>
-						<h4>Predict-Disease</h4>
-						<p class="info">Want to detect whether your plant is healthy or not?</p>
-					</div>
-				</a>
-			</div> 
+				<div class="col-lg-6 col-md-6 blog-left mb-lg-5  pb-lg-0 pb-5 ">
+					<a href="{% url 'Predict-Disease' %}">
+						<img src="{% static 'images/predict.jpg'%}" style="width:80%;height:80%;" class="img-fluid"
+							alt="plant disease prediction" />
+						<div>
+							<h4>Predict-Disease</h4>
+							<p class="info">Want to detect whether your plant is healthy or not?</p>
+						</div>
+					</a>
+				</div>
 
-			<!--Expert Talk-->
+				<!--Expert Talk-->
 
-			<div class="col-lg-6 col-md-6 blog-right mb-lg-5 pb-lg-0 pb-md-5">
-				<a href="{% url 'expert-advice' %}">
-					<img src="{% static 'images/webrtc.jpg'%}" style="width:80%;height:80%;"class="img-fluid" alt="expert talk" />
-					<div>
-						<h4>Expert-advice</h4>
-						<p class="info">Want to seek guidance from experts?</p>
-					</div>
-				</a>
-			</div>
+				<div class="col-lg-6 col-md-6 blog-right mb-lg-5 pb-lg-0 pb-md-5">
+					<a href="{% url 'expert-advice' %}">
+						<img src="{% static 'images/webrtc.jpg'%}" style="width:80%;height:80%;" class="img-fluid"
+							alt="expert talk" />
+						<div>
+							<h4>Expert-advice</h4>
+							<p class="info">Want to seek guidance from experts?</p>
+						</div>
+					</a>
+				</div>
 
-			<!--Fertilizer Suggestion-->
+				<!--Fertilizer Suggestion-->
 
-			<div class="col-lg-6 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
-				<a href="{% url 'Fertilizer' %}">
-					<img src="{% static 'images/fertirecom.jpg'%}" style="width:80%;height:80%;"class="img-fluid" alt="fertilizer">
-					<div>
-						<h4>Fertilizer</h4>
-						<p class="info">What to know which fertilizer works best for your crop?</p>
-					</div>
-				</a>
-			</div>
+				<div class="col-lg-6 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
+					<a href="{% url 'Fertilizer' %}">
+						<img src="{% static 'images/fertirecom.jpg'%}" style="width:80%;height:80%;" class="img-fluid"
+							alt="fertilizer">
+						<div>
+							<h4>Fertilizer</h4>
+							<p class="info">What to know which fertilizer works best for your crop?</p>
+						</div>
+					</a>
+				</div>
 
-			<!--Forums-->
+				<!--Forums-->
 
-			<div class="col-lg-6 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
-				<a href="{% url 'Forums' %}">
-					<img src="{% static 'images/forums.png'%}"style="width:80%;height:80%;" class="img-fluid" alt="forums">
-					<div>
-						<h4>Forums</h4>
-						<p class="info">Want to post any of your query?</p>
-					</div>
-				</a>
+				<div class="col-lg-6 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
+					<a href="{% url 'Forums' %}">
+						<img src="{% static 'images/forums.png'%}" style="width:80%;height:80%;" class="img-fluid"
+							alt="forums">
+						<div>
+							<h4>Forums</h4>
+							<p class="info">Want to post any of your query?</p>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
-	</div>
 </section>
 <!-- ----------------------Features Ends----------------------------------->
 <!-- -----------------------E - Learning----------------------------------->
@@ -224,8 +245,13 @@ function scrollFunction() {
 	<section class="learn">
 		<div class="container pb-lg-5 pb-md-5">
 			<h2 class="my-lg-5 my-sm-5 text-center" style="padding-top:50px"> E - Learning </h2>
-			<iframe style="margin:20px auto;max-width: 800px;height:400px;" src="https://www.youtube.com/embed/Dip81m1rRrM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width=100% height=100% ></iframe>
-			<a href="{% url 'E-learning' %}"><h6 style="text-align: center;font-weight: bold;text-decoration: underline;">Click here for more</h6></a>
+			<iframe style="margin:20px auto;max-width: 800px;height:400px;"
+				src="https://www.youtube.com/embed/Dip81m1rRrM" title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen width=100% height=100%></iframe>
+			<a href="{% url 'E-learning' %}">
+				<h6 style="text-align: center;font-weight: bold;text-decoration: underline;">Click here for more</h6>
+			</a>
 		</div>
 	</section>
 </center>
@@ -233,17 +259,17 @@ function scrollFunction() {
 <!--------------- on successful submission of contact us form -------------->
 <br>
 {% if messages %}
-	<center>
-		<div class="col-lg-8">
-			<ul class="messages">
-				{% for msg in messages %}
-					<li>
-						 <p class="msg">{{msg.message}}</p> 
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
-	</center>
-	
-{% endif %} 
+<center>
+	<div class="col-lg-8">
+		<ul class="messages">
+			{% for msg in messages %}
+			<li>
+				<p class="msg">{{msg.message}}</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</center>
+
+{% endif %}
 {% endblock %}

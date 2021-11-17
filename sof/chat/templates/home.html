@@ -38,6 +38,13 @@
     .chat-text{
         color: black !important;
     }
+    body {
+            font-family: 'Montserrat', sans-serif !important; 
+        }
+
+    .idtext{
+        font-size: 1em;
+    }
 </style>
 
 
@@ -69,10 +76,10 @@
     <section id="chat-app">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 mb-4">
-                    Your ID:<h4 id="peer-id" data-toggle="tooltip" data-placement="top" title="Click to copy peer ID">
+                <div class="col-lg-6 col-md-6 mb-4 idtext">
+                    Your ID:&nbsp; <h4 id="peer-id" data-toggle="tooltip" data-placement="top" title="Click to copy peer ID " class="idtext">
                         </h4>
-                     <a href="#getUserNameModal" data-toggle="modal">change</a> 
+                     <a href="#getUserNameModal" data-toggle="modal"><small>&nbsp;&nbsp;change</small></a> 
                 </div>
                 <div class="col-lg-6 col-md-6 mb-5 ">
                     <div class="form-inline">
