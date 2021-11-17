@@ -7,12 +7,12 @@
         color: rgb(16, 122, 16);
         font-weight: bolder;
         font-size: 1.8em;
-        padding: 180px 100px 40px 100px !important; 
+        padding: 180px 100px 40px 100px !important;
         text-align: center !important;
         margin-top: 0;
-        font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+        font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
 
-    } 
+    }
 
     .video-grid-container {
         display: grid;
@@ -30,46 +30,64 @@
         background-color: black;
     }
 
-    .btnconnect{
+    .btnconnect {
         background-color: #0275d8 !important;
         color: white !important;
     }
 
-    .chat-text{
+    .chat-text {
         color: black !important;
     }
-    body {
-            font-family: 'Montserrat', sans-serif !important; 
-        }
 
-    .idtext{
+    body {
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    .idtext {
         font-size: 1em;
     }
-    li{
-        display:block;
+
+    li {
+        display: block;
     }
-    .logged-nav{
+
+    .logged-nav {
         font-weight: 900;
-   }
-    .vc-head{
-        color: rgb(16, 122, 16);
-		font-weight: bolder;
-		font-size: 1em;
-		padding: 10px;
-		text-align: center;
-        font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
     }
-    #their-video
-    {
+
+    .vc-head {
+        color: rgb(16, 122, 16);
+        font-weight: bolder;
+        font-size: 1em;
+        padding: 10px;
+        text-align: center;
+        font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    }
+
+    .btncolor {
+        background-color: rgb(16, 122, 16) !important;
+        width: 11em !important;
+        color: white !important;
+    }
+
+    .btnred {
+        background-color: rgb(204, 38, 38) !important;
+        width: 11em !important;
+        color: white !important;
+
+    }
+
+    #their-video {
         width: 600px !important;
         height: 420px !important;
         background-color: rgba(218, 255, 191, 1) !important;
         border-radius: 0.5em !important;
     }
-    #my-video{
+
+    #my-video {
         width: 280px !important;
         height: 180px !important;
-        background-color: rgba(39, 8, 8, 0.671) !important;
+        background-color: rgba(129, 86, 86, 0.671) !important;
         border-radius: 0.5em !important;
     }
 </style>
@@ -78,7 +96,7 @@
 
 <head>
     <!-- Custom Fonts -->
-    
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
@@ -95,7 +113,7 @@
 <h2 id="expert-head">Get advice from our Experts</h2>
 
 <section>
-  
+
 
     <hr>
 
@@ -104,9 +122,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 mb-4 idtext">
-                    Your ID:&nbsp; <h4 id="peer-id" data-toggle="tooltip" data-placement="top" title="Click to copy peer ID " class="idtext">
-                        </h4>
-                     <a href="#getUserNameModal" data-toggle="modal"><small>&nbsp;&nbsp;change</small></a> 
+                    Your ID:&nbsp; <h4 id="peer-id" data-toggle="tooltip" data-placement="top"
+                        title="Click to copy peer ID " class="idtext">
+                    </h4>
+                    <a href="#getUserNameModal" data-toggle="modal"><small>&nbsp;&nbsp;change</small></a>
                 </div>
                 <div class="col-lg-6 col-md-6 mb-5 ">
                     <div class="form-inline">
@@ -114,7 +133,8 @@
                             <label for="inputPeerUserId" class="sr-only">Password</label>
                             <input type="text" class="form-control" id="inputPeerUserId" placeholder="Enter Expert ID">
                         </div>
-                        <button type="button" class="btn btn-outline-primary btnconnect" id='connect-btn' >Connect</button>
+                        <button type="button" class="btn btn-outline-primary btnconnect"
+                            id='connect-btn'>Connect</button>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 mb-4">
@@ -134,7 +154,7 @@
 
     <div class="container-fluid chat-container">
         <div class="row">
-            
+
         </div>
     </div>
 
@@ -157,19 +177,20 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <!-- <h2 class="title">Video Call</h2> -->
-                                <h2 class="vc-head">Video Call</h2>
+                                <h2 class="vc-head">Expert Call</h2>
                                 <div class="pure-u-2-3" id="video-container">
                                     <video id="their-video" autoplay=""></video>
                                     <video id="my-video" muted="true" autoplay=""></video>
                                 </div>
 
                                 <div class="text-center mt-3">
-                                    <button type="button" class="btn btn-secondary mute-audio ml-3 mt-2"><i
-                                            class="fa fa-microphone-slash"></i>Mute Audio</button>
-                                    <button type="button" class="btn btn-secondary mute-video ml-3 mt-2"><i
-                                            class="fa fa-video-camera"></i>Mute Video</button>
-                                    <button type="button" class="btn btn-danger end-call ml-3 mt-2"
-                                        data-dismiss="modal"><i class="fa fa-times"></i>End Call</button>
+                                    <button type="button" class="btn btn-secondary mute-audio ml-3 mt-2 btncolor">
+                                        <i class="fa fa-microphone-slash"></i>Mute Audio</button>
+                                    <button type="button" class="btn btn-secondary mute-video ml-3 mt-2 btncolor">
+
+                                        <i class="fa fa-video-camera"></i>Mute Video</button>
+                                    <button type="button" class="btn end-call ml-3 mt-2 btnred " data-dismiss="modal"><i
+                                            class="fa fa-times"></i>End Call</button>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +209,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="user-name" >
+                        <input type="text" class="form-control" id="user-name">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -209,8 +230,9 @@
                 <div class="modal-body">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger reject-call" data-dismiss="modal">Reject</button>
-                    <button type="button" class="btn btn-primary accept-call" data-dismiss="modal">Accept</button>
+                    <button type="button" class="btn btn-primary accept-call btncolor" data-dismiss="modal">Accept</button>
+                    <button type="button" class="btn btn-danger reject-call  btnred" data-dismiss="modal">Reject</button>
+
                 </div>
             </div>
         </div>

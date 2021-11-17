@@ -114,12 +114,12 @@ function myjsapp(peerClient) {
         })
 
         $('.mute-audio').click(function (event) {
-            if($(this).hasClass('btn-secondary')) {
-                $(this).removeClass('btn-secondary').addClass('btn-success')
+            if($(this).hasClass('btncolor')) {
+                $(this).removeClass('btncolor').addClass('btn-success')
                 // End established call
                 peerClient.muteAudio(false);
             } else {
-                $(this).removeClass('btn-success').addClass('btn-secondary')
+                $(this).removeClass('btn-success').addClass('btncolor')
                 peerClient.muteAudio(true);
             }
         })

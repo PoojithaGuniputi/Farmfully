@@ -504,12 +504,12 @@ ul.chatHistory li {
   overflow: hidden;
   display: flex;
 }
-
+/* 
 .chat-container {
   position: fixed;
   bottom: 0;
   left: 0;
-}
+} */
 .chat-div {
   margin-left: 10px;
   margin-right: 10px;
