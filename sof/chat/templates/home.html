@@ -1,5 +1,4 @@
-<!-- {% extends 'layout.html' %} -->
-
+{% extends 'layout.html' %}
 {% block body %}
 {% load static %}
 <style>
@@ -69,7 +68,9 @@
         width: 11em !important;
         color: white !important;
     }
-
+    .btn-success{
+        width: 11em !important;
+    }
     .btnred {
         background-color: rgb(204, 38, 38) !important;
         width: 11em !important;
@@ -106,7 +107,7 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 
-
+    <!-- Custom css -->
     <link href="{% static 'css/agency.css' %}" rel="stylesheet">
 </head>
 
@@ -158,9 +159,6 @@
         </div>
     </div>
 
-    <!-- Portfolio Modals -->
-    <!-- Use the modals below to showcase details about your portfolio projects! -->
-    <!-- Portfolio Modal 1 -->
     <div class="portfolio-modal modal" id="videoCallPanel" tabindex="-1" role="dialog" data-keyboard="false"
         aria-hidden="true">
         <div class="modal-dialog">
@@ -175,8 +173,6 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <!-- <h2 class="title">Video Call</h2> -->
                                 <h2 class="vc-head">Expert Call</h2>
                                 <div class="pure-u-2-3" id="video-container">
                                     <video id="their-video" autoplay=""></video>
@@ -184,12 +180,12 @@
                                 </div>
 
                                 <div class="text-center mt-3">
-                                    <button type="button" class="btn btn-secondary mute-audio ml-3 mt-2 btncolor">
+                                    <button type="button" id="audio-button" class="btn  mute-audio ml-3 mt-2 btncolor">
                                         <i class="fa fa-microphone-slash"></i>Mute Audio</button>
-                                    <button type="button" class="btn btn-secondary mute-video ml-3 mt-2 btncolor">
+                                    <button type="button" class="btn  mute-video ml-3 mt-2 btncolor">
 
                                         <i class="fa fa-video-camera"></i>Mute Video</button>
-                                    <button type="button" class="btn end-call ml-3 mt-2 btnred " data-dismiss="modal"><i
+                                    <button type="button"  id="vedio-button"class="btn end-call ml-3 mt-2 btnred " data-dismiss="modal"><i
                                             class="fa fa-times"></i>End Call</button>
                                 </div>
                             </div>
@@ -230,8 +226,10 @@
                 <div class="modal-body">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary accept-call btncolor" data-dismiss="modal">Accept</button>
-                    <button type="button" class="btn btn-danger reject-call  btnred" data-dismiss="modal">Reject</button>
+                    <button type="button" class="btn btn-primary accept-call btncolor"
+                        data-dismiss="modal">Accept</button>
+                    <button type="button" class="btn btn-danger reject-call  btnred"
+                        data-dismiss="modal">Reject</button>
 
                 </div>
             </div>
@@ -248,6 +246,5 @@
     <script src="{% static 'js/app.js' %}"></script>
     <script src="{% static 'js/peer-client.js' %}"></script>
 </section>
-
 </html>
 {% endblock %}

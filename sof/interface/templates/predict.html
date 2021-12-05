@@ -36,7 +36,7 @@
 	<hr>
 	<div class="predict-body">
 	<!-- <form class="form-signin" enctype=multipart/form-data  method="POST"> -->
-	<form class="form-signin" enctype=multipart/form-data action="https://farmfully-api.herokuapp.com/" method="POST">
+	<form class="form-signin" enctype=multipart/form-data action="http://127.0.0.1:5000/" method="POST">
 		{%  csrf_token %}
 		<p>Please Upload The Image</p>
 		<input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-size: 0.8em;
